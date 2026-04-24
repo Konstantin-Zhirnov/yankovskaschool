@@ -4,6 +4,7 @@ import { Playfair_Display } from 'next/font/google'
 
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { Toasts } from '@/components/Toasts'
 
 import './globals.css'
 
@@ -55,6 +56,8 @@ const RootLayout: FC<IProps> = ({ children }) => {
         {children}
 
         <Footer />
+
+        <Toasts />
       </body>
     </html>
   )
