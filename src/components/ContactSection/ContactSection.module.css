@@ -1,0 +1,118 @@
+.section{
+    padding-top: 56px;
+    background: #0b0f17;
+    color: rgba(255,255,255,.92);
+}
+
+.title{
+    margin:0 0 18px;
+    font-size:32px;
+    letter-spacing:-0.02em;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 18px;
+    padding-bottom: 4rem
+}
+
+.left{
+    border:1px solid rgba(255,255,255,.10);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    background: rgba(255,255,255,.03);
+}
+
+.leftTitle{
+    margin:0 0 14px;
+    letter-spacing:-0.02em;
+}
+
+.item{ margin-bottom: 1.6rem; border-top:1px solid rgba(255,255,255,.08); }
+.item:first-of-type{ border-top: none; padding-top: 0; }
+
+.label{
+    margin:0;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: rgba(255,255,255,.65);
+}
+
+.value{
+    margin:0.3rem 0 0;
+    line-height:1.6;
+}
+
+.link{
+    display:inline-block;
+    margin-top:8px;
+    color: rgba(255,255,255,.92);
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+        color: #777;
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: rgba(255,255,255,.92);
+        font-size: 24px;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: #777;
+            transform: scale(1.06);
+        }
+    }
+}
+
+.form{
+    border:1px solid rgba(255,255,255,.10);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    background: rgba(255,255,255,.03);
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+    height: 100%;
+}
+
+.input, .textarea{
+    width:100%;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.15);
+    color: rgba(255,255,255,.92);
+    padding: 12px 12px;
+    outline: none;
+}
+
+.input::placeholder, .textarea::placeholder{
+    color: rgba(255,255,255,.55);
+}
+
+.submit{
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.92);
+    color: #0b0f17;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    .grid{ grid-template-columns: 1fr; }
+}

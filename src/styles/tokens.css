@@ -1,0 +1,21 @@
+:root{
+    --bg:#FFFFFF;
+    --second-bg:#F4F1EC;
+    --title-color: #C48A6A;
+    --text:#555555;
+    --hero-color:#FFFFFF;
+    --radius-lg:22px;
+
+    --muted: rgba(11, 15, 23, 0.68);
+
+    --line:rgba(11,15,23,.10);
+    --surface:rgba(11,15,23,.03);
+
+
+    --radius-md:16px;
+
+    --shadow-sm:0 12px 34px rgba(11,15,23,.10);
+    --shadow-xs:0 8px 18px rgba(11,15,23,.08);
+
+    --container:1160px;
+}

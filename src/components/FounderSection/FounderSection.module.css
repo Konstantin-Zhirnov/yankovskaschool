@@ -1,0 +1,123 @@
+.section{ padding: 42px 0; }
+
+.grid{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+
+.media{
+    position:relative;
+    border-radius: var(--radius-lg);
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    background: var(--surface);
+    animation:float 20s ease-in-out infinite;
+}
+
+.img{
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.mediaMobile {
+    display: none;
+    margin: 2rem 0;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    max-width: 50%;
+}
+
+.mediaDesktop { display: block; }
+
+.text_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin:0;
+    font-size:28px;
+    letter-spacing:-0.02em;
+    color:var(--muted);
+    white-space: pre-line;
+}
+
+.eyebrow {
+    margin:0 0 10px;
+    color:var(--muted);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+}
+
+.text{
+    margin:12px 0 0;
+    color:var(--muted);
+    line-height:1.6;
+    font-size: 1.1rem;
+}
+
+.cta{
+    display:inline-flex;
+    margin-top:2rem;
+    padding:12px 16px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:#fff;
+    box-shadow:var(--shadow-xs);
+    font-size:14px;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+        transform: translateY(-2px);
+    }
+}
+
+
+.overlay{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background: linear-gradient(180deg, rgba(0,0,0,0.00) 55%, rgba(0,0,0,0.18) 100%);
+}
+
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0)}
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .mediaDesktop {
+        display: none;
+    }
+
+    .mediaMobile  {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 640px) {
+    .title{
+        font-size: 1.9rem;
+    }
+
+    .mediaMobile  {
+        max-width: 90%;
+    }
+}
