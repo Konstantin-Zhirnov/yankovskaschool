@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     title: 'Yankovska School of Rhythmic Gymnastics',
     description:
       'Join the Yankovska School of Rhythmic Gymnastics — programs for all levels! Develop your gymnastic skills, enjoy creative movement, and become part of a vibrant athletic community.',
-    url: 'https://yankovskaschool.com/',
+    url: 'https://yankovskaschool.vercel.app/',
     siteName: 'Yankovska School of Rhythmic Gymnastics',
     images: [
       {
-        url: 'https://yankovskaschool.com/images/og-image.jpg',
+        url: 'https://yankovskaschool.vercel.app/images/og-image.jpg',
         width: 1200,
         height: 800,
       },
