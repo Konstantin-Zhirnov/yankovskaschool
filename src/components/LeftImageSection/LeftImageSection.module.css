@@ -62,6 +62,10 @@
     .grid{
         grid-template-columns:2fr 2fr;
     }
+
+    .title {
+        padding-left: calc(50% + 2rem);
+    }
 }
 
 @media (max-width:900px){
