@@ -60,14 +60,20 @@
     .grid{
         grid-template-columns:1fr;
         gap: 2rem;
+
+        .media{
+            max-width: 84%;
+            margin: auto;
+        }
     }
 
     .title {
         margin-bottom: 3rem;
     }
+}
 
-    .media{
-        max-width: 84%;
-        margin: auto;
+@media (max-width:768px){
+    .grid .media {
+        max-width: 100%;
     }
 }
