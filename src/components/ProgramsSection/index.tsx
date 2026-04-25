@@ -1,10 +1,34 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion, Variants } from 'framer-motion'
 
 import { Wrapper } from '@/components/Wrapper'
 import { Reveal } from '@/components/Reveal'
 
 import styles from './ProgramsSection.module.css'
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.19,
+      delayChildren: 0.15,
+    },
+  },
+}
+
+const card: Variants = {
+  hidden: { opacity: 0, y: 32, scale: 0.97, filter: 'blur(8px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: 'blur(0px)',
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+}
 
 const items = [
   {
@@ -49,33 +73,37 @@ export function ProgramsSection() {
           <h2 className={styles.title}>Our Programs</h2>
         </Reveal>
 
-        <div className={styles.grid}>
-          {items.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.3}>
-              <article className={styles.card}>
-                <div className={styles.media}>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className={styles.img}
-                    style={{ objectPosition: item.focus }}
-                  />
+        <motion.div
+          className={styles.grid}
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.16 }}
+        >
+          {items.map((item) => (
+            <motion.article variants={card} className={styles.card} key={item.title}>
+              <div className={styles.media}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className={styles.img}
+                  style={{ objectPosition: item.focus }}
+                />
 
-                  <div className={styles.overlay} />
-                </div>
+                <div className={styles.overlay} />
+              </div>
 
-                <div className={styles.body}>
-                  <p className={styles.number}>{item.number}</p>
+              <div className={styles.body}>
+                <p className={styles.number}>{item.number}</p>
 
-                  <h3 className={styles.cardTitle}>{item.title}</h3>
+                <h3 className={styles.cardTitle}>{item.title}</h3>
 
-                  <p className={styles.desc}>{item.description}</p>
-                </div>
-              </article>
-            </Reveal>
+                <p className={styles.desc}>{item.description}</p>
+              </div>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
 
         <Reveal>
           <div className={styles.footer}>
