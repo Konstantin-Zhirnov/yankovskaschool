@@ -9,7 +9,7 @@ export function Footer() {
         <div>© {new Date().getFullYear()} Yankovska School of Rhythmic Gymnastics</div>
 
         <a
-          href="https://create-website"
+          href="https://create-website.ca"
           className={styles.link}
           target="_blank"
           rel="noopener noreferrer"

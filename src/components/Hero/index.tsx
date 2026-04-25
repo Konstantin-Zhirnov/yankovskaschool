@@ -10,14 +10,14 @@ import styles from './Hero.module.css'
 import { useEffect, useState } from 'react'
 
 export function Hero() {
-  const [imgSrc, setImgSrc] = useState('/images/rhythmic_gymnastics.jpg')
+  const [imgSrc, setImgSrc] = useState('/images/rhythmic-gymnastics-nanaimo.webp')
 
   useEffect(() => {
     const updateImage = () => {
       if (window.innerWidth <= 768) {
-        setImgSrc('/images/rhythmic-gymnastics-nanaimo.jpg')
+        setImgSrc('/images/rhythmic-gymnastics-nanaimo.webp')
       } else {
-        setImgSrc('/images/rhythmic_gymnastics-canada.jpg')
+        setImgSrc('/images/rhythmic_gymnastics-canada.webp')
       }
     }
 
