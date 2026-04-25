@@ -10,7 +10,7 @@ import styles from './Hero.module.css'
 import { useEffect, useState } from 'react'
 
 export function Hero() {
-  const [imgSrc, setImgSrc] = useState('/images/rhythmic-gymnastics-nanaimo.webp')
+  const [imgSrc, setImgSrc] = useState('/images/rhythmic_gymnastics-canada.webp')
 
   useEffect(() => {
     const updateImage = () => {
